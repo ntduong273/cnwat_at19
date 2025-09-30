@@ -1,0 +1,4 @@
+Pham Minh|2012-08-12|Ha Noi|class1
+Nguyen Khoi|2012-08-11|TP HCM|class1
+Pham Hoang|2012-08-10|Ha Noi|class2
+Nguyen Tung Duong|2000-02-12|Hà Nội|19a

@@ -1,0 +1,51 @@
+<h3>Form nhập liệu cho bảng HOSO</h3>
+<form id="hosoForm" onsubmit="return validateHosoForm()">
+    <table border="1" cellpadding="6" style="margin-bottom:16px;">
+        <tr>
+            <th>FIELD</th>
+            <th>TYPE</th>
+        </tr>
+        <tr>
+            <td><i>MAHS</i></td>
+            <td><i>Char(8)</i></td>
+        </tr>
+        <tr>
+            <td>HOTEN</td>
+            <td>Char(50)</td>
+        </tr>
+        <tr>
+            <td>NGAYSINH</td>
+            <td>Date</td>
+        </tr>
+        <tr>
+            <td>DIACHI</td>
+            <td>Char(150)</td>
+        </tr>
+        <tr>
+            <td>LOP</td>
+            <td>Char(6)</td>
+        </tr>
+        <tr>
+            <td>DIEMTOAN</td>
+            <td>Float</td>
+        </tr>
+        <tr>
+            <td>DIEMLY</td>
+            <td>Float</td>
+        </tr>
+        <tr>
+            <td>DIEMHOA</td>
+            <td>Float</td>
+        </tr>
+    </table>
+    <label>Mã học sinh (8 ký tự): <input type="text" name="mahs" maxlength="8" required></label><br><br>
+    <label>Họ tên: <input type="text" name="hoten" maxlength="50" required></label><br><br>
+    <label>Ngày sinh: <input type="date" name="ngaysinh" required></label><br><br>
+    <label>Địa chỉ: <input type="text" name="diachi" maxlength="150" required></label><br><br>
+    <label>Lớp: <input type="text" name="lop" maxlength="6" required></label><br><br>
+    <label>Điểm toán: <input type="number" name="diemtoan" step="0.01" required></label><br><br>
+    <label>Điểm lý: <input type="number" name="diemly" step="0.01" required></label><br><br>
+    <label>Điểm hóa: <input type="number" name="diemhoa" step="0.01" required></label><br><br>
+
+    <button type="submit">Gửi</button>
+</form>

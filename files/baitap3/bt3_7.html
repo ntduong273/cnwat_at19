@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="menu">
+            <ul>
+                <li data-title="Quản lý cán bộ (Đăng ký thông tin)">» Quản lý cán bộ (Đăng ký thông tin)</li>
+                <li data-title="Phân quyền">» Phân quyền</li>
+                <li data-title="Cổng thông tin đào tạo và người học">» Cổng thông tin đào tạo và người học</li>
+                <li data-title="Quản lý văn bản và hồ sơ công việc">» Quản lý văn bản và hồ sơ công việc</li>
+                <li data-title="Hành chính công">» Hành chính công</li>
+                <li data-title="Hệ thống thông tin báo cáo">» Hệ thống thông tin báo cáo</li>
+            </ul>
+        </div>
+            <!-- Khu vực hiển thị tiêu đề bên phải -->
+        <div class="display-area">
+            <h3 id="selected-task">» Vui lòng chọn một tác vụ</h3>
+        </div>
+
+        <style>
+            .menu li {
+                padding: 10px;
+                margin-bottom: 5px;
+                background-color: #eee;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                color:black;
+            }
+            /* Hover: sáng lên */
+            .menu li:hover {
+                background-color: #d1f0d1;
+            }
+            /* Khi được chọn */
+            .menu li.selected {
+                background-color: #4caf50;
+                color: white;
+                font-weight: bold;
+            }
+        </style>
+
+        <script>
+            // Lấy các phần tử menu
+            const menuItems = document.querySelectorAll('.menu li');
+            const titleDisplay = document.getElementById('selected-task');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function () {
+                // Xóa class 'selected' khỏi tất cả
+                menuItems.forEach(i =>
+                i.classList.remove('selected'));
+
+                // Thêm class 'selected' cho item hiện tại
+                this.classList.add('selected');
+                // Hiển thị tiêu đề tương ứng
+                const title = this.getAttribute('data-title');
+                titleDisplay.textContent = `${title}`;
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<body>
+    <script type="text/javascript">
+        var d = new Date();
+        var time = d.getHours();
+        if (time<10) {
+            document.write("<b>Good morning</b>");
+        } else if (time>=10 && time<16) {
+            document.write("<b>Good day</b>");
+        } else {
+            document.write("<b>Hello World!</b>");
+        }
+    </script>
+    <p>day la vi du su dung cau lenh if..else if...else .</p>
+</body>
+</html>    
+
+<!--
+Đoạn code này minh họa cách dùng **câu lệnh rẽ nhánh `if .. else if .. else`** trong JavaScript:
+
+1. `var d = new Date();` → Lấy thời gian hiện tại.
+2. `var time = d.getHours();` → Lấy giờ (0–23).
+3. So sánh giá trị `time`:
+
+   * Nếu nhỏ hơn 10 → hiển thị **"Good morning"**.
+   * Nếu từ 10 đến trước 16 → hiển thị **"Good day"**.
+   * Nếu từ 16 trở đi → hiển thị **"Hello World!"**.
+
+👉 Ví dụ:
+
+* Nếu bây giờ là 08:30 → trang in ra **Good morning**.
+* Nếu là 14:00 → trang in ra **Good day**.
+* Nếu là 20:00 → trang in ra **Hello World!**.
+
+-->

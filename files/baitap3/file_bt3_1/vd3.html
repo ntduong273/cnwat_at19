@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Câu 1.4</title>
+    <script language=javascript>
+        function chay() {
+            var a;
+            a=window.document.bai1.T1.value*1;
+            if ((a%2)==0) { alert(a+ " la so chan ");}
+            else {alert(a+" la so le ");}
+        }
+    </script>
+</head>
+<body>
+    <form name=bai1>
+        <input type=text name=T1>
+        <input type=button name=c value="chay thu" onclick="chay()">
+    </form>
+</body>
+</html>
+
+<!--
+Đoạn code này kiểm tra **số chẵn / lẻ** bằng JavaScript:
+
+1. Người dùng nhập một số vào ô text `T1`.
+2. Khi bấm nút **"chay thu"**, hàm `chay()` chạy:
+
+   * `a = window.document.bai1.T1.value * 1;`
+     → Lấy giá trị trong ô nhập và nhân `*1` để chuyển thành số.
+   * `if ((a % 2) == 0)`
+     → Nếu chia hết cho 2, nghĩa là số chẵn.
+     → Hiện alert: `a + " la so chan"`.
+   * Ngược lại (`else`) → số lẻ.
+     → Hiện alert: `a + " la so le"`.
+
+👉 Ví dụ:
+
+* Nhập **4** → hiện: `4 la so chan`.
+* Nhập **7** → hiện: `7 la so le`.
+
+-->

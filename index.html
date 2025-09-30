@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title>Công nghệ web an toàn</title>
+        <link rel="icon" type="image/x-icon" href="/AT190115/image/favicon.ico">
+        <link rel="stylesheet" href="/AT190115/style.css">
+        <script src="myscript.js" defer></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" media="all">
+    </head>
+    <body>
+        <!-------------------- PROFILE ---------------------->
+
+        <div class="profile-container">
+            <div class="profile-info">
+                <div class="avatar">
+                    <img src="image/avatar.jpg" alt="Avatar">
+                </div>
+                <div class="info">
+                    <h1>NGUYỄN TÙNG DƯƠNG</h1>
+                    <p>Mã SV: AT190115</p>
+                </div>
+            </div>
+            <div class="profile-banner">
+                <img src="image/banner.jpg" alt="Banner">
+            </div>
+        </div>
+
+        <!-------------------- MAIN CONTENT ---------------------->
+        <div class="content-container">
+            <div class="buttons">
+                <div class="dropdown-group">
+                    <button class="dropdown-toggle">BÀI TẬP 2 ▾ </button>
+                    <div class="dropdown-menu">
+                        <button type="button" onclick="loadContent(event, 'files/baitap2/bt2_1.html')">2.1 Bài tập ví dụ mẫu trong bài giảng</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap2/bt2_2.html')">2.2 Tạo trang giới thiệu thông tin cá nhân của từng sinh viên</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap2/bt2_3.html')">2.3 Tạo trang bảng điểm cá nhân</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap2/bt2_4.html')">2.4 Tạo trang lý lịch cá nhân</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap2/bt2_5.html')">2.5 Trang tin</button>
+                    </div>
+                </div>
+                <div class="dropdown-group">
+                    <button class="dropdown-toggle">BÀI TẬP 3 ▾ </button>
+                    <div class="dropdown-menu">
+                        <button type="button" onclick="loadContent(event, 'files/baitap3/bt3_1.html')">3.1 Bài tập ví dụ mẫu trong bài giảng</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap3/bt3_2.html')">3.2 Viết trang kiểm tra thi trắc nghiệm gồm nhiều thể loại</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap3/bt3_3.html')">3.3 Thiết kế form nhập liệu cho table LOP</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap3/bt3_4.html')">3.4 Thiết kế form nhập liệu cho table HOSO</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap3/bt3_5.html')">3.5 Form nhập</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap3/bt3_6.html')">3.6 Danh sách</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap3/bt3_7.html')">3.7 Thực đơn</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap3/bt3_8.html')">3.8 Tab</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap3/bt3_9.html')">3.9 Cây</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap3/bt3_10.html')">3.10 Máy tính</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap3/bt3_11.html')">3.11 Hoạt cảnh</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap3/bt3_12.html')">3.12 Sắp xếp và tìm kiếm trên bảng</button>
+                    </div>
+                </div>
+                <div class="dropdown-group">
+                    <button class="dropdown-toggle">BÀI TẬP 4 ▾ </button>
+                    <div class="dropdown-menu">
+                        <button type="button" onclick="loadContent(event, 'files/baitap4/bt4_1/bt4_1_index.php')">4.1 -> 4.4 GetForm</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap4/bt4_5/bt4_5_index.php')">4.5 Session</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap4/bt4_6/bt4_6_index.php')">4.6 Cookie</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap4/bt4_7/bt4_7_index.php')">4.7 Functions</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap4/bt4_8/bt4_8_index.php')">4.8 Đọc, ghi file</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap4/bt4_9/bt4_9_index.php')">4.9 Thao tác file và data flow</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap4/bt4_10/bt4_10_index.php')">4.10 Website đa ngôn ngữ</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap4/bt4_11/bt4_11_index.php')">4.11 Kết nối và truy vấn cơ sở dữ liệu cơ bản</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap4/bt4_12/bt4_12_index.php')">4.12 Truy vấn dữ liệu</button>
+                        <button type="button" onclick="loadContent(event, 'files/baitap4/bt4_13/bt4_13_index.php')">4.13 Web bán laptop phần end user</button>
+                    </div>
+                </div>
+                <!--
+                <button onclick="loadContent(event, 'files/baitap4/bt4_index.php')">BÀI TẬP 4 </button>
+                -->
+            </div>
+
+            <div class="content" id="main-content">
+
+            </div>
+        </div>
+
+        <!-------------------- COPYRIGHT ---------------------->
+        <footer>
+            &copy; 2025 Nguyen Tung Duong. All Rights Reserved.
+        </footer>
+    </body>
+</html>

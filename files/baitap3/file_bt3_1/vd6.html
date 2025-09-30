@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function disp_confirm()
+            {
+                var r=confirm("Press a button");
+                if (r==true) {
+                    document.write("You pressed OK!");
+                } else {
+                    document.write("You pressed Cancel!");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" onclick="disp_confirm()" value="Display a confirm box" />
+    </body>
+</html>
+
+<!--
+Đoạn code này minh họa cách dùng **`confirm()`** trong JavaScript:
+
+1. Có một nút **"Display a confirm box"**.
+2. Khi bấm nút, hàm `disp_confirm()` chạy:
+
+   * Gọi `confirm("Press a button")`.
+   * Trình duyệt hiện hộp thoại có hai nút: **OK** và **Cancel**.
+3. Nếu người dùng bấm **OK** → `r = true` → in ra:
+
+   ```
+   You pressed OK!
+   ```
+4. Nếu người dùng bấm **Cancel** → `r = false` → in ra:
+
+   ```
+   You pressed Cancel!
+   ```
+
+👉 Lưu ý: ở đây dùng `document.write()`, nên kết quả sẽ ghi đè toàn bộ nội dung trang web sau khi chọn OK/Cancel.
+
+-->

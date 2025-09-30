@@ -1,0 +1,45 @@
+<html>
+    <body>
+        <script type="text/javascript">
+            var d=new Date();
+            theDay=d.getDay();
+            switch (theDay)
+            {
+                case 5:
+                    document.write("Friday");
+                break;
+                case 6:
+                    document.write("Saturday");
+                break;
+                case 0:
+                    document.write("Sunday");
+                break;
+                default:
+                    document.write("Chuc dau tuan vui ve!");
+            }
+        </script>
+    </body>
+</html>
+
+<!--
+Đoạn code này minh họa cách dùng **`switch...case`** để hiển thị thứ trong tuần:
+
+1. `var d = new Date();` → Lấy ngày giờ hiện tại.
+2. `theDay = d.getDay();` → Trả về số thứ trong tuần (0–6):
+
+   * 0 = Chủ nhật
+   * 1 = Thứ hai
+   * 2 = Thứ ba
+   * …
+   * 5 = Thứ sáu
+   * 6 = Thứ bảy
+3. **`switch (theDay)`** kiểm tra:
+
+   * Nếu `5` → hiển thị **Friday**.
+   * Nếu `6` → hiển thị **Saturday**.
+   * Nếu `0` → hiển thị **Sunday**.
+   * Còn lại (`default`) → hiển thị **"Chuc dau tuan vui ve!"**.
+
+👉 Kết quả: Tùy theo hôm nay là ngày nào, trang web sẽ in ra tên ngày tương ứng hoặc lời chúc.
+
+-->

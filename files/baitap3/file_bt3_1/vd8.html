@@ -1,0 +1,57 @@
+<html>
+    <body>
+        <script type="text/javascript">
+            var str="Hello world!";
+            document.write(str.indexOf("Hello") + "<br />");
+            document.write(str.indexOf("World") + "<br />");
+            document.write(str.indexOf("world") + "<br />");
+            document.write(str.toUpperCase()+ "<br/>");
+            document.write(str.length+ "<br />");
+            document.write(str.replace("w","W") + "<br />");
+        </script>
+    </body>
+</html>
+
+<!--
+Đoạn code này minh họa một số **hàm xử lý chuỗi trong JavaScript**:
+
+1. `str = "Hello world!"`
+
+   * Chuỗi gốc.
+
+2. `str.indexOf("Hello")` → **0**
+
+   * Tìm vị trí `"Hello"` trong chuỗi (bắt đầu tại index 0).
+
+3. `str.indexOf("World")` → **-1**
+
+   * Không tìm thấy `"World"` (vì chuỗi có `"world"` viết thường).
+
+4. `str.indexOf("world")` → **6**
+
+   * Tìm `"world"` thường, bắt đầu từ vị trí số 6.
+
+5. `str.toUpperCase()` → `"HELLO WORLD!"`
+
+   * Chuyển toàn bộ sang chữ hoa.
+
+6. `str.length` → **12**
+
+   * Độ dài chuỗi là 12 ký tự.
+
+7. `str.replace("w","W")` → `"Hello World!"`
+
+   * Thay ký tự `"w"` thường thành `"W"` hoa.
+
+👉 Kết quả in ra trên trang:
+
+```
+0
+-1
+6
+HELLO WORLD!
+12
+Hello World!
+```
+
+-->

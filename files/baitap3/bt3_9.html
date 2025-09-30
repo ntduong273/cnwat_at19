@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Cây thư mục</title>
+<style>
+  ul, li {
+    list-style-type: none;
+    padding-left: 20px;
+    font-family: Arial, sans-serif;
+  }
+  .folder {
+    cursor: pointer;
+    user-select: none;
+  }
+  .folder::before {
+    content: "📁 ";
+  }
+  .nested {
+    display: none;
+  }
+  .active {
+    display: block;
+  }
+  .toggle::before {
+    content: "- ";
+  }
+  .collapsed::before {
+    content: "+ ";
+  }
+</style>
+</head>
+<body>
+
+<ul>
+  <li><span class="folder toggle">Root</span>
+    <ul class="nested active">
+      <li><span class="folder">Folder 1</span></li>
+      <li><span class="folder toggle">Folder 2</span>
+        <ul class="nested active">
+          <li><span class="folder">Folder 2-1</span></li>
+          <li><span class="folder toggle">Folder 2-2</span>
+            <ul class="nested active">
+              <li><span class="folder">Folder 2-2-1</span></li>
+              <li><span class="folder">Folder 2-2-2</span></li>
+            </ul>
+          </li>
+          <li><span class="folder">Folder 2-3</span></li>
+        </ul>
+      </li>
+      <li><span class="folder">Folder 3</span></li>
+      <li><span class="folder collapsed">Folder 4</span>
+        <ul class="nested">
+          <li><span class="folder">Folder 4-1</span></li>
+        </ul>
+      </li>
+      <li><span class="folder">Folder 5</span></li>
+    </ul>
+  </li>
+</ul>
+
+<script>
+  document.querySelectorAll(".folder").forEach(folder => {
+    folder.addEventListener("click", function(e) {
+      const nested = this.nextElementSibling;
+      if (nested && nested.tagName === "UL") {
+        nested.classList.toggle("active");
+        this.classList.toggle("toggle");
+        this.classList.toggle("collapsed");
+      }
+      e.stopPropagation();
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function disp_prompt()
+            {
+                var name=prompt("VUI LONG NHAP TEN CUA BAN","LE THANH LAM");
+                if (name!=null && name!="") {
+                    document.write("XIN CHAO " + name + "! How are you today?");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" onclick="disp_prompt()" value="Display a prompt box" />
+    </body>
+</html>
+
+<!--
+Đoạn code này minh họa cách dùng **`prompt()`** trong JavaScript để nhập dữ liệu từ người dùng:
+
+1. Có một nút **"Display a prompt box"**.
+2. Khi bấm nút, hàm `disp_prompt()` chạy:
+
+   * Gọi `prompt("VUI LONG NHAP TEN CUA BAN","LE THANH LAM")`.
+
+     * Hộp thoại hiện lên với lời nhắc *"VUI LONG NHAP TEN CUA BAN"* và giá trị mặc định *"LE THANH LAM"*.
+   * Người dùng nhập tên vào.
+3. Nếu người dùng nhập (không để trống, không bấm Cancel), thì trang sẽ hiển thị thông điệp:
+
+   ```
+   XIN CHAO [Tên vừa nhập]! How are you today?
+   ```
+
+👉 Ví dụ: nếu nhập **"Nguyen Van A"**, thì kết quả hiển thị sẽ là:
+
+```
+XIN CHAO Nguyen Van A! How are you today?
+```
+-->

@@ -1,0 +1,30 @@
+<h3>Form nhập liệu cho bảng LOP</h3>
+<form id="lopForm" onsubmit="return validateLopForm()">
+    <table border="1" cellpadding="6" style="margin-bottom:16px;">
+        <tr>
+            <th>FIELD</th>
+            <th>TYPE</th>
+        </tr>
+        <tr>
+            <td><i>MALOP</i></td>
+            <td><i>Char(6)</i></td>
+        </tr>
+        <tr>
+            <td>TENLOP</td>
+            <td>Char(50)</td>
+        </tr>
+        <tr>
+            <td>KHOAHOC</td>
+            <td>Integer</td>
+        </tr>
+        <tr>
+            <td>GVCN</td>
+            <td>Char(50)</td>
+        </tr>
+    </table>
+    <label>Mã lớp (6 ký tự): <input type="text" name="malop" maxlength="6" required></label><br><br>
+    <label>Tên lớp: <input type="text" name="tenlop" maxlength="50" required></label><br><br>
+    <label>Khóa học: <input type="number" name="khoahoc" required></label><br><br>
+    <label>GVCN: <input type="text" name="gvcn" maxlength="50" required></label><br><br>
+    <button type="submit">Gửi</button>
+</form>

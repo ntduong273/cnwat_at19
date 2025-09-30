@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function timedText()
+            {
+                var t1=setTimeout("window.document.lam.txt.value='2 seconds!'",2000);
+                var t2=setTimeout("document.getElementById('txt').value='4 seconds!'",4000);
+                var t3=setTimeout("document.getElementById('txt').value='6 seconds!'",6000);
+            }
+        </script>
+    </head>
+    <body>
+        <form name=lam>
+            <input type="button" value="Display timed text!" onClick="timedText()">
+            <input type="text" id="txt">
+        </form>
+    </body>
+</html>
+
+<!--
+Đoạn code này minh họa cách dùng **`setTimeout()`** để hiển thị nội dung theo thời gian trễ:
+
+1. Trang có một nút **"Display timed text!"** và một ô nhập text (`id="txt"`).
+2. Khi bấm nút, hàm `timedText()` chạy:
+
+   * Sau **2 giây**: thay giá trị ô nhập thành `"2 seconds!"`.
+   * Sau **4 giây**: thay thành `"4 seconds!"`.
+   * Sau **6 giây**: thay thành `"6 seconds!"`.
+
+👉 Kết quả: Khi bấm nút, ô text sẽ lần lượt đổi nội dung theo mốc thời gian 2s → 4s → 6s.
+
+-->

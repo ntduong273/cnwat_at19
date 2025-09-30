@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function timedMsg()
+            {
+                var t=setTimeout("alert('5 seconds!')",5000);
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="button" value="Display timed alertbox!" onClick = "timedMsg()">
+        </form>
+        <p>Click on the button above. An alert box will be displayed after 5 seconds.</p>
+    </body>
+</html>
+
+<!--
+Đoạn code này minh họa việc dùng **`setTimeout()`** để hiển thị hộp thoại cảnh báo sau một khoảng thời gian:
+
+1. Có nút bấm **"Display timed alertbox!"**.
+2. Khi bấm nút, hàm `timedMsg()` chạy:
+
+   * Gọi `setTimeout("alert('5 seconds!')", 5000);`
+   * Nghĩa là sau **5 giây** sẽ hiện ra một **alert box** với nội dung `"5 seconds!"`.
+
+👉 Tóm lại: **Bấm nút → đợi 5 giây → hiện hộp thoại thông báo**.
+
+-->

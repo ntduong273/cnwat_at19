@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <label for="hoten">Họ tên:</label> <input type="text" name="hoten" maxlength="50" class="focus-next" required><br><br>
+        <label for="diachi">Địa chỉ:</label> <input type="text" name="diachi" maxlength="100" class="focus-next"><br><br>
+        <label for="gioitinh">Giới tính:</label>
+            <input type="radio" name="gioitinh" value="Nam"> Nam
+            <input type="radio" name="gioitinh" value="Nữ"> Nữ
+        <br><br>
+        <label for="ngaysinh">Ngày sinh:</label> <input type="text" name="ngaysinh" maxlength="15" class="focus-next" required><br><br>
+        <label for="email">E-mail:</label> <input type="text" name="email" maxlength="30" class="focus-next" required><br><br>
+        <label for="dienthoai">Điện thoại:</label> <input type="text" name="dienthoai" maxlength="15" class="focus-next"><br><br>
+        <label for="khoadangki">Khóa đăng kí:</label>
+            <input type="checkbox" name="khoadangki" value="tienganh"> Tiếng Anh
+            <input type="checkbox" name="khoadangki" value="quantri"> Quản trị
+            <input type="checkbox" name="khoadangki" value="cntt"> CNTT
+        <br><br>
+        <label for="tensudung">Tên sử dụng:</label> <input type="text" name="tensudung" maxlength="30" class="focus-next" required><br><br>
+        <label for="matkhau">Mật khẩu:</label> <input type="text" name="matkhau" maxlength="24" class="focus-next" required><br><br>
+        <label for="golaimatkhau">Gõ lại mật khẩu:</label> <input type="text" name="golaimatkhau" maxlength="24" class="focus-next" required><br><br>
+        <label for="ghichu">Ghi chú:</label>
+        <textarea name="ghichu" rows="4" cols="40" class="focus-next"></textarea><br><br>
+
+        <button>Chấp nhận</button>
+        <button>Bỏ qua</button>
+
+        <style>
+            
+            /* Form Nhap */
+
+            label {
+                display: inline-block;
+                width: 120px;
+                text-align: left;
+                margin-right: 10px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            textarea {
+            width: 200px; /* đồng bộ chiều rộng input */
+            padding: 4px;
+            box-sizing: border-box;
+            }
+
+            input[name="hoten"],
+            input[name="ngaysinh"],
+            input[name="email"],
+            input[name="tensudung"],
+            input[name="matkhau"],
+            input[name="golaimatkhau"] {
+                background: #00eaff;
+            }
+
+            
+
+            input[type="radio"],
+            input[type="checkbox"] {
+                margin-left: 10px;
+                margin-right: 3px;
+            }
+
+
+            button {
+                padding: 4px 18px;
+                margin-right: 8px;
+                border: 1px solid #888;
+                border-radius: 4px;
+                background: #eee;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            button:hover {
+                background: #ccc;
+            }
+        </style>
+        <script>
+        // Chuyển điều khiển sang ô tiếp theo khi nhấn Enter
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputs = document.querySelectorAll('.focus-next');
+            for (let i = 0; i < inputs.length; i++) {
+                inputs[i].addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        let next = inputs[i + 1];
+                        if (next) next.focus();
+                    }
+                });
+            }
+        });
+        </script>
+    </body>
+
+
+</html>

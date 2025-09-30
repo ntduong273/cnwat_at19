@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function startTime()
+            {
+                var today=new Date();
+                var h=today.getHours();
+                var m=today.getMinutes();
+                var s=today.getSeconds();
+                m=checkTime(m);
+                s=checkTime(s);
+                document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+                t=setTimeout('startTime()',500);
+            }
+            function checkTime(i)
+            {
+                if (i<10) {
+                    i="0" + i;
+                }
+                return i;
+            }
+        </script>
+    </head>
+    <body onload="startTime()">
+        <div id="txt"></div>
+    </body>
+</html>
+
+<!--
+Đoạn code này tạo **đồng hồ số chạy trực tiếp trên trang web**:
+
+1. **`startTime()`**
+
+   * Lấy thời gian hiện tại bằng `new Date()`.
+   * Lấy giờ (`getHours()`), phút (`getMinutes()`), giây (`getSeconds()`).
+   * Gọi hàm `checkTime()` để thêm số 0 phía trước nếu < 10 (ví dụ `09`).
+   * Ghép lại thành chuỗi `h:m:s`.
+   * Hiển thị lên phần tử `<div id="txt">`.
+   * Dùng `setTimeout('startTime()',500)` để lặp lại sau 0.5 giây → đồng hồ luôn cập nhật.
+
+2. **`checkTime(i)`**
+
+   * Nếu số nhỏ hơn 10 thì thêm "0" đằng trước.
+   * Dùng để định dạng phút và giây chuẩn `00–59`.
+
+3. **`<body onload="startTime()">`**
+
+   * Khi tải trang xong, tự động gọi `startTime()`.
+
+👉 Kết quả: Trang web hiển thị đồng hồ thời gian thực, ví dụ:
+
+```
+14:05:09
+```
+
+-->

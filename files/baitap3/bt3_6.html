@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<style>
+  table {
+    border-collapse: collapse;
+    width: 60%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color:#000;
+  }
+  th, td {
+    border: 1px solid #000;
+    padding: 8px;
+  }
+  thead {
+    background-color: aqua; /* màu hàng tiêu đề */
+  }
+  tbody tr:nth-child(odd) { /* Hàng lẻ (trừ tiêu đề) */
+    background-color: #ffffff;
+  }
+  tbody tr:nth-child(even) { /* Hàng chẵn */
+    background-color: #9a9898;
+  }
+  tbody tr:hover {
+    background-color: lightgreen !important;
+    cursor: pointer;
+  }
+  .selected {
+    background-color: yellow !important;
+  }
+</style>
+</head>
+<body>
+
+<table id="danhSach">
+  <thead>
+    <tr>
+      <th><input type="checkbox" id="selectAll"></th>
+      <th>Họ tên</th>
+      <th>Ngày sinh</th>
+      <th>Giới tính</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td>Hoàng Thị Thảo</td>
+      <td>23/6/1990</td>
+      <td>Nữ</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td>Ngô Mạnh Quân</td>
+      <td>14/4/1992</td>
+      <td>Nam</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td>Nguyễn Thanh Tùng</td>
+      <td>27/9/1991</td>
+      <td>Nam</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td>Hoàng Thị Ngân</td>
+      <td>12/12/1992</td>
+      <td>Nữ</td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+      const table = document.getElementById("danhSach");
+  const selectAll = document.getElementById("selectAll");
+  const checkboxes = table.querySelectorAll("tbody input[type='checkbox']");
+
+  // Hàm cập nhật màu nền khi checkbox thay đổi
+  function updateRowBackground(checkbox) {
+    const row = checkbox.closest("tr");
+    if (checkbox.checked) {
+      row.classList.add("selected");
+    } else {
+      row.classList.remove("selected");
+    }
+  }
+
+  // Xử lý khi click vào checkbox từng dòng
+  checkboxes.forEach(cb => {
+    cb.addEventListener("change", () => {
+      updateRowBackground(cb);
+      updateSelectAllStatus();
+    });
+
+    // Khi click vào hàng, hiệu ứng như click vào checkbox
+    cb.closest("tr").addEventListener("click", (e) => {
+      if (e.target.tagName !== "INPUT") { // tránh click đúp
+        cb.checked = !cb.checked;
+        cb.dispatchEvent(new Event("change"));
+      }
+    });
+  });
+
+  // Xử lý khi click vào checkbox tiêu đề
+  selectAll.addEventListener("change", () => {
+    checkboxes.forEach(cb => {
+      cb.checked = selectAll.checked;
+      updateRowBackground(cb);
+    });
+  });
+
+  // Cập nhật trạng thái checkbox tiêu đề
+  function updateSelectAllStatus() {
+    const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+    selectAll.checked = allChecked;
+  }
+</script>
+
+</body>
+</html>

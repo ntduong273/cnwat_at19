@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <script type="text/javascript">
+            var x;
+            var mycars = new Array();
+            mycars[0] = "Saab";
+            mycars[1] = "Volvo";
+            mycars[2] = "BMW";
+            for (x in mycars)
+            {
+                document.write(mycars[x] + "<br/>");
+            }
+        </script>
+    </body>
+</html>
+
+<!--
+Đoạn code này tạo một mảng và in ra các phần tử của nó:
+
+1. **Tạo mảng `mycars`** với 3 phần tử:
+
+   * `mycars[0] = "Saab"`
+   * `mycars[1] = "Volvo"`
+   * `mycars[2] = "BMW"`
+
+2. **Vòng lặp `for (x in mycars)`**:
+
+   * Duyệt qua các chỉ số (`0,1,2`).
+   * Với mỗi chỉ số, in ra giá trị mảng bằng `document.write(mycars[x] + "<br/>");`.
+
+👉 Kết quả trên trang web sẽ hiển thị:
+
+```
+Saab
+Volvo
+BMW
+```
+
+-->

@@ -1,0 +1,328 @@
+<style>
+    #main-content table {
+    width: 100%;
+    border-collapse: collapse; /* gộp viền lại cho đẹp */
+    }
+
+    #main-content table, th, td {
+        border: 1px solid white; /* viền màu trắng */
+    }
+
+    #main-content th, td {
+        padding: 8px;
+        text-align: left;
+    }
+
+    /* hiệu ứng hover cho từng dòng */
+    #main-content tr:hover {
+        background-color: rgba(255, 255, 255, 0.1); /* nền sáng nhẹ khi rê chuột */
+        cursor: pointer;
+    }
+
+    #main-content thead tr:hover {
+        background-color: inherit; /* giữ nguyên màu header */
+        cursor: default;
+    }
+
+  #main-content .header {
+        text-align: center;
+    }
+    #main-content .header .left {
+        float: left;
+        text-align: left;
+    }
+    #main-content .header .right {
+        float: right;
+        text-align: right;
+    }
+    #main-content .clearfix {
+        clear: both;
+    }
+    #main-content .title {
+        text-align: center;
+        margin-top: 20px;
+    }
+    #main-content .title h2 {
+        margin: 5px 0;
+        text-transform: uppercase;
+    }
+    #main-content .info {
+        margin-top: 20px;
+        line-height: 1.8;
+    }
+    #main-content .info b {
+        font-weight: bold;
+    }
+</style>
+
+<div class="content">
+  <div class="header">
+    <div class="left">
+      <b>BAN CƠ YẾU CHÍNH PHỦ<br>
+      HỌC VIỆN KỸ THUẬT MẬT MÃ</b>
+    </div>
+    <div class="right">
+      <b>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM<br>
+      Độc lập - Tự do - Hạnh phúc</b>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+  <div class="title">
+    <h2>BẢNG ĐIỂM HỌC TẬP</h2>
+    <div>(Theo QĐ công nhận TN số 2345/QĐ-ĐHĐN ngày 08/03/2011)</div>
+  </div>
+
+    <div class="info">
+        <div><b>Họ và tên:</b> NGUYỄN TÙNG DƯƠNG</div>
+        <div><b>Ngày sinh:</b> ??/??/2004 &nbsp;&nbsp;&nbsp; <b>Nơi sinh:</b> Hà Tây</div>
+        <div><b>Cấp đào tạo:</b> Đại học &nbsp;&nbsp;&nbsp; <b>Hệ đào tạo:</b> Chính quy</div>
+        <div><b>Ngành học:</b> An toàn thông tin &nbsp;&nbsp;&nbsp; <b>Khóa học:</b> 2022 - 2027</div>
+        <div><b>Kỳ học:</b> 2 &nbsp;&nbsp;&nbsp; <b>Năm học:</b> 2024 - 2025</div>
+        <div><b>Mã sinh viên:</b> AT190115</div>
+    </div>
+
+    <table class="table table-hover">
+        <thead>
+    <tr>
+      <th class="text-center">#</th>
+      <th class="text-center">Năm học</th>
+      <th class="text-center">Học kỳ</th>
+      <th class="text-center">Môn thi</th>
+      <th class="text-center">Lần</th>
+      <th class="text-center">TP1</th>
+      <th class="text-center">TP2</th>
+      <th class="text-center">ĐQT</th>
+      <th class="text-center">Điểm thi</th>
+      <th class="text-center">Điểm HP</th>
+      <th class="text-center">Điểm chữ</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td class="text-center">1</td>
+      <td class="text-center">2024-2025</td>
+      <td class="text-center">1</td>
+      <td>An toàn cơ sở dữ liệu</td>
+      <td class="text-center">1</td>
+      <td class="text-center">7.5</td>
+      <td class="text-center">10</td>
+      <td class="text-center">8.25</td>
+      <td class="text-center">9</td>
+      <td class="text-center">8.8</td>
+      <td class="text-center">A</td>
+    </tr>
+
+    <tr>
+      <td class="text-center">2</td>
+      <td class="text-center">2024-2025</td>
+      <td class="text-center">2</td>
+      <td>An toàn mạng máy tính</td>
+      <td class="text-center">1</td>
+      <td class="text-center">7.5</td>
+      <td class="text-center">10</td>
+      <td class="text-center">8.3</td>
+      <td class="text-center">8.2</td>
+      <td class="text-center">8.2</td>
+      <td class="text-center">B+</td>
+    </tr>
+
+    <tr>
+      <td class="text-center">3</td>
+      <td class="text-center">2024-2025</td>
+      <td class="text-center">1</td>
+      <td>Cấu trúc dữ liệu và giải thuật</td>
+      <td class="text-center">1</td>
+      <td class="text-center">8</td>
+      <td class="text-center">10</td>
+      <td class="text-center">8.6</td>
+      <td class="text-center">10</td>
+      <td class="text-center">9.6</td>
+      <td class="text-center">A+</td>
+    </tr>
+
+    <tr>
+      <td class="text-center">4</td>
+      <td class="text-center">2024-2025</td>
+      <td class="text-center">2</td>
+      <td>Chuyên đề cơ sở</td>
+      <td class="text-center">1</td>
+      <td class="text-center">8</td>
+      <td class="text-center">8</td>
+      <td class="text-center">8</td>
+      <td class="text-center">9.2</td>
+      <td class="text-center">8.8</td>
+      <td class="text-center">A</td>
+    </tr>
+
+    <tr>
+      <td class="text-center">5</td>
+      <td class="text-center">2024-2025</td>
+      <td class="text-center">2</td>
+      <td>Cơ sở an toàn thông tin</td>
+      <td class="text-center">1</td>
+      <td class="text-center">9</td>
+      <td class="text-center">10</td>
+      <td class="text-center">9.3</td>
+      <td class="text-center">8.4</td>
+      <td class="text-center">8.7</td>
+      <td class="text-center">A</td>
+    </tr>
+
+    <tr>
+      <td class="text-center">6</td>
+      <td class="text-center">2024-2025</td>
+      <td class="text-center">2</td>
+      <td>Giao thức an toàn mạng</td>
+      <td class="text-center">1</td>
+      <td class="text-center">9</td>
+      <td class="text-center">9</td>
+      <td class="text-center">9</td>
+      <td class="text-center">7.6</td>
+      <td class="text-center">8</td>
+      <td class="text-center">B+</td>
+    </tr>
+
+    <tr>
+      <td class="text-center">7</td>
+      <td class="text-center">2024-2025</td>
+      <td class="text-center">1</td>
+      <td>Hệ quản trị cơ sở dữ liệu</td>
+      <td class="text-center">1</td>
+      <td class="text-center">10</td>
+      <td class="text-center">10</td>
+      <td class="text-center">10</td>
+      <td class="text-center">7.8</td>
+      <td class="text-center">8.5</td>
+      <td class="text-center">A</td>
+    </tr>
+
+    <tr>
+      <td class="text-center">8</td>
+      <td class="text-center">2024-2025</td>
+      <td class="text-center">2</td>
+      <td>Kiến trúc máy tính và hợp ngữ</td>
+      <td class="text-center">1</td>
+      <td class="text-center">8.8</td>
+      <td class="text-center">8.5</td>
+      <td class="text-center">8.7</td>
+      <td class="text-center">9.2</td>
+      <td class="text-center">9.1</td>
+      <td class="text-center">A+</td>
+    </tr>
+
+    <tr>
+      <td class="text-center">9</td>
+      <td class="text-center">2024-2025</td>
+      <td class="text-center">2</td>
+      <td>Kỹ thuật lập trình</td>
+      <td class="text-center">1</td>
+      <td class="text-center">8</td>
+      <td class="text-center">8</td>
+      <td class="text-center">8</td>
+      <td class="text-center">9</td>
+      <td class="text-center">8.7</td>
+      <td class="text-center">A</td>
+    </tr>
+
+    <tr>
+      <td class="text-center">10</td>
+      <td class="text-center">2024-2025</td>
+      <td class="text-center">1</td>
+      <td>Kỹ thuật truyền số liệu</td>
+      <td class="text-center">1</td>
+      <td class="text-center">8.4</td>
+      <td class="text-center">8</td>
+      <td class="text-center">8.28</td>
+      <td class="text-center">6.5</td>
+      <td class="text-center">7</td>
+      <td class="text-center">B</td>
+    </tr>
+
+    <tr>
+      <td class="text-center">11</td>
+      <td class="text-center">2024-2025</td>
+      <td class="text-center">1</td>
+      <td>Lập trình hướng đối tượng</td>
+      <td class="text-center">1</td>
+      <td class="text-center">8.2</td>
+      <td class="text-center">10</td>
+      <td class="text-center">8.74</td>
+      <td class="text-center">8.5</td>
+      <td class="text-center">8.6</td>
+      <td class="text-center">A</td>
+    </tr>
+
+    <tr>
+      <td class="text-center">12</td>
+      <td class="text-center">2024-2025</td>
+      <td class="text-center">1</td>
+      <td>Linux và phần mềm nguồn mở</td>
+      <td class="text-center">1</td>
+      <td class="text-center">6.5</td>
+      <td class="text-center">10</td>
+      <td class="text-center">7.55</td>
+      <td class="text-center">9</td>
+      <td class="text-center">8.6</td>
+      <td class="text-center">A</td>
+    </tr>
+
+    <tr>
+      <td class="text-center">13</td>
+      <td class="text-center">2024-2025</td>
+      <td class="text-center">1</td>
+      <td>Nguyên lý hệ điều hành</td>
+      <td class="text-center">1</td>
+      <td class="text-center">8.6</td>
+      <td class="text-center">10</td>
+      <td class="text-center">9.02</td>
+      <td class="text-center">6.8</td>
+      <td class="text-center">7.5</td>
+      <td class="text-center">B</td>
+    </tr>
+
+    <tr>
+      <td class="text-center">14</td>
+      <td class="text-center">2024-2025</td>
+      <td class="text-center">1</td>
+      <td>Nhập môn mật mã học</td>
+      <td class="text-center">1</td>
+      <td class="text-center">9.5</td>
+      <td class="text-center">8</td>
+      <td class="text-center">9.1</td>
+      <td class="text-center">6.8</td>
+      <td class="text-center">7.5</td>
+      <td class="text-center">B</td>
+    </tr>
+
+    <tr>
+      <td class="text-center">15</td>
+      <td class="text-center">2024-2025</td>
+      <td class="text-center">2</td>
+      <td>Phân tích, thiết kế hệ thống thông tin</td>
+      <td class="text-center">1</td>
+      <td class="text-center">8.5</td>
+      <td class="text-center">9</td>
+      <td class="text-center">8.7</td>
+      <td class="text-center">7</td>
+      <td class="text-center">7.5</td>
+      <td class="text-center">B</td>
+    </tr>
+
+    <tr>
+      <td class="text-center">16</td>
+      <td class="text-center">2024-2025</td>
+      <td class="text-center">2</td>
+      <td>Tiếng Anh chuyên ngành ATTT</td>
+      <td class="text-center">1</td>
+      <td class="text-center">9</td>
+      <td class="text-center">9</td>
+      <td class="text-center">9</td>
+      <td class="text-center">8.6</td>
+      <td class="text-center">8.7</td>
+      <td class="text-center">A</td>
+    </tr>
+  </tbody>
+</table>
+</div>

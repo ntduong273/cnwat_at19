@@ -1,0 +1,41 @@
+<p><a href="#" onclick="loadPage('files/baitap3/file_bt3_1/vd1.html'); return false;">1. Sử dụng biến</a></p>
+<p><a href="#" onclick="loadPage('files/baitap3/file_bt3_1/vd2.html'); return false;">2. Sử dụng Textbox và Chương trình con</a></p>
+<p><a href="#" onclick="loadPage('files/baitap3/file_bt3_1/vd3.html'); return false;">3. Sử dụng câu lệnh IF</a></p>
+<p><a href="#" onclick="loadPage('files/baitap3/file_bt3_1/vd4.html'); return false;">4. Sử dụng đối tượng ngày tháng năm trong JS</a></p>
+<p><a href="#" onclick="loadPage('files/baitap3/file_bt3_1/vd5.html'); return false;">5. Sử dụng câu lệnh switch</a></p>
+<p><a href="#" onclick="loadPage('files/baitap3/file_bt3_1/vd6.html'); return false;">6. Sử dụng confirm</a></p>
+<p><a href="#" onclick="loadPage('files/baitap3/file_bt3_1/vd7.html'); return false;">7. Sử dụng prompt</a></p>
+<p><a href="#" onclick="loadPage('files/baitap3/file_bt3_1/vd8.html'); return false;">8. Sử dụng kiểu String</a></p>
+<p><a href="#" onclick="loadPage('files/baitap3/file_bt3_1/vd9.html'); return false;">9. Sử dụng kiểu ARRAY</a></p>
+<p><a href="#" onclick="loadPage('files/baitap3/file_bt3_1/vd10.html'); return false;">10. Sử dụng kiểu thiết lập thời gian</a></p>
+<p><a href="#" onclick="loadPage('files/baitap3/file_bt3_1/vd11.html'); return false;">11. Ví dụ khác về cách sử dụng thiết lập thời gian</a></p>
+<p><a href="#" onclick="loadPage('files/baitap3/file_bt3_1/vd12.html'); return false;">12. Đồng hồ</a></p>
+<p><a href="#" onclick="loadPage('files/baitap3/file_bt3_1/vd13.html'); return false;">13. Hiệu ứng ảnh</a></p>
+<p><a href="#" onclick="loadPage('files/baitap3/file_bt3_1/vd14.html'); return false;">14. Sử dụng Select...option</a></p>
+
+<iframe id="content-frame" name="content-frame" src="" width="100%" style="border:none;overflow:hidden;"></iframe>
+
+<script>
+    function loadPage(url) {
+        const frame = document.getElementById("content-frame");
+        frame.src = url;
+
+        // Sau khi iframe load thì điều chỉnh chiều cao
+        frame.onload = function() {
+            try {
+                const body = frame.contentWindow.document.body;
+                const html = frame.contentWindow.document.documentElement;
+                const height = Math.max(
+                    body.scrollHeight,
+                    body.offsetHeight,
+                    html.clientHeight,
+                    html.scrollHeight,
+                    html.offsetHeight
+                );
+                frame.style.height = height + "px";
+            } catch (e) {
+                console.error("Không thể truy cập nội dung iframe (khác domain?)", e);
+            }
+        };
+    }
+</script>
